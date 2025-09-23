@@ -5,5 +5,7 @@ let person = {
     age: "20"
 }
 
-Object.assign(person, { Dept: "CSE", Degree: "BE"})
+Object.assign(person, { Dept: "CSE", Degree: "BE", Percentage: 80})
 console.log(person);
+
+
