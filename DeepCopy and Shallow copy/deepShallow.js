@@ -5,7 +5,7 @@ let a = 10;
 let b = a; // Deep Copy
 
 a = 20;
-console.log(a, b); // 20, 10
+// console.log(a, b); // 20, 10
 
 // -----------------------For Non-Primitive Data Types--------------------
 
@@ -53,8 +53,8 @@ person2.roll = "Producer";
 person2.address.city = "Mumbai";
 person2.address.pincode = 400001;
 
-console.log(person1);
-console.log(person2);
+// console.log(person1);
+// console.log(person2);
 
 
 
@@ -63,3 +63,19 @@ console.log(person2);
     premitive and non premitive both data types should have a different address in memory is called "Deep copy"
 
     */
+
+
+//---------------------------- JSON Method --------------------
+// Another way to create a deep copy of an object is by using JSON methods. This method is simple but has some limitations, such as not being able to copy functions or handling special object types like Date.
+
+
+let person3 = JSON.parse(JSON.stringify(person1));
+person3.name = "Kamal";
+person3.address.city = "Pune";
+person3.address.pincode = 411001;
+// console.log(person3);
+
+
+
+//---------------------- Array Deep Copy --------------------
+
