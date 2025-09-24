@@ -77,5 +77,21 @@ person3.address.pincode = 411001;
 
 
 
-//---------------------- Array Deep Copy --------------------
+//---------------------- Array Shallow Copy --------------------
+
+let arr1 = [1, 2, 3,[4, 5, 6]];
+
+let arr2 = [...arr1]; // Shallow Copy using spread operator
+
+let newArr = JSON.parse(JSON.stringify(arr1)); // Deep Copy using JSON methods
+
+arr2[0] = 10;
+arr2[3][0] = 40; // Modifying nested array
+
+newArr[3][2] = "sixty"; // Modifying nested array in deep copied array 
+
+
+console.log(arr1);
+console.log(arr2);
+console.log(newArr);
 
